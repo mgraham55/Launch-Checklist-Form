@@ -37,6 +37,8 @@ fetch(endpointURL).then(function(response) {
           alert("All Fields are required!");
       } else if (isNaN(fuelLevel.value) || isNaN(cargoMass.value)) {
          alert("Fuel Level and Cargo Mass must be a number");
+      } else if (!isNaN(pilotName.value) || !isNaN(copilotName.value)) {
+         alert("Invalid Pilot or Co-pilot name.")
       } else {
          let validStatus = true
          list.style.visibility = "visible"
